@@ -1,5 +1,5 @@
 #### Use for…of for array
-```
+```javascript
 let names = ['Gertrude', 'Henry', 'Melvin', 'Billy Bob'];
 for (let animal of animals) {
 
@@ -10,7 +10,7 @@ for (let animal of animals) {
 ```
 
 #### Use for…in for object
-```
+```javascript
 let oldCar = {
   make: 'Toyota',
   model: 'Tercel',
@@ -23,7 +23,7 @@ for (let key in oldCar) {
 ```
 
 #### For loop and ForEach
-```
+```javascript
 let summary_item = ["today", "yesterday", "week", "month", "year", "total"];
 for (let i = 0; i < summary_item.length; i++) {
     ["visitors", "visits"].forEach(function (key) {
