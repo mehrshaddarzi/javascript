@@ -40,3 +40,7 @@ ajax: function (action, arg = false, dynamic = false) {
     }, this.random_time());
 }
 ```
+
+#### Each Loop
+https://www.sitepoint.com/jquery-each-function-examples/
+
