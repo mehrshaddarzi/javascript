@@ -1,3 +1,20 @@
+#### start
+```javascript
+jQuery(document).ready(function($){
+
+$(".title").hide();
+jQuery(".title").hide()
+
+});
+```
+
+#### Click Event
+```javascript
+$(document).on("click","#test-element",function() {
+    alert("click bound to document listening for #test-element");
+});
+```
+
 #### Ajax Get request + extend function parameter
 ```javascript
 ajax: function (action, arg = false, dynamic = false) {
