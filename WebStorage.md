@@ -6,29 +6,29 @@ sessionStorage - use when you need to store somthing that changes or somthing te
 
 
 #### Add New
-```
+```javascript
 localStorage.setItem('key', 'value');
 sessionStorage.setItem('key', 'value');
 ```
 
 #### Get Storage
-```
+```javascript
 localStorage.getItem('key');
 sessionStorage.getItem('key');
 ```
 
 #### Remove
-```
+```javascript
 localStorage.removeItem('key');
 ```
 
 #### Remove All
-```
+```javascript
 localStorage.clear();
 ```
 
 #### Add Array to Local Storage
-```
+```javascript
 let itemsArray = [];
 localStorage.setItem('items', JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem('items'));
@@ -38,7 +38,7 @@ localStorage.setItem('items', JSON.stringify(itemsArray));
 ```
 
 #### Use if Condition to Get
-```
+```javascript
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 ```
 
