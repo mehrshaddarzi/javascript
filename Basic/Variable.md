@@ -40,6 +40,24 @@ let result = 3 + 4
 // let let = 12
 ```
 
+## Const Variable (nor Reassign)
+```javascript
+const person = {
+    age: 27
+}
+
+person.age = 28
+// person = {}
+
+console.log(person)
+```
+
+### var vs let
+Difference between var and let in JavaScript
+var and let are both used for function declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
+It can be said that a variable declared with var is defined throughout the program as compared to let.
+https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/
+
 ## Operation
 ```javascript
 // === - equality operator
