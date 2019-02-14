@@ -56,7 +56,7 @@ console.log(person)
 Difference between var and let in JavaScript
 var and let are both used for function declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
 It can be said that a variable declared with var is defined throughout the program as compared to let.
-https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/
+https://tylermcginnis.com/var-let-const/
 
 ## Operation
 ```javascript
