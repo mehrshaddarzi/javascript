@@ -182,3 +182,117 @@ const getThingsToDo = function (todos) {
 
 console.log(getThingsToDo(todos))
 ```
+
+
+## Sort
+```javascript
+//Sort By Alphabix
+const notes = [{
+    title: 'my next trip',
+    body: 'I would like to go to Spain'
+}, {
+    title: 'Habbits to work on',
+    body: 'Exercise. Eating a bit better.'
+}, {
+    title: 'Office modification',
+    body: 'Get a new seat'
+}]
+
+const sortNotes = function (notes) {
+    notes.sort(function (a, b) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) {
+            return -1
+        } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+sortNotes(notes)
+
+//Sort By Boolean
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
+
+const sortTodos = function (todos) {
+    todos.sort(function (a, b) {
+        if (!a.completed && b.completed) {
+            return -1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+//sort by date
+var array = [{id: 1, date: "Mar 12 2012 10:00:00 AM"},{id: 2, date: "Mar 28 2012 08:00:00 AM"}];
+function sortFunction(a,b){  
+    var dateA = new Date(a.date).getTime();
+    var dateB = new Date(b.date).getTime();
+    return dateA > dateB ? 1 : -1;  
+}; 
+
+var array = [{id: 1, date: "Mar 12 2012 10:00:00 AM"},{id: 2, date: "Mar 28 2012 08:00:00 AM"}];
+array.sort(sortFunction);
+```
+
+
+## Complete Example Working Array
+```javascript
+const account = {
+    name: 'Andrew Mead',
+    expenses: [],
+    income: [],
+    addExpense: function (description, amount) {
+        this.expenses.push({
+            description: description,
+            amount: amount
+        })
+    },
+    addIncome: function (description, amount) {
+        this.income.push({
+            description: description,
+            amount: amount
+        })
+    },
+    getAccountSummary: function () {
+        let totalExpenses = 0
+        let totalIncome = 0
+        let accountBalance = 0
+
+        this.expenses.forEach(function (expense) {
+            totalExpenses = totalExpenses + expense.amount
+        })
+
+        this.income.forEach(function (income) {
+            totalIncome = totalIncome + income.amount
+        })
+
+        accountBalance = totalIncome - totalExpenses
+
+        return `${this.name} has a balance of $${accountBalance}. $${totalIncome} in income. $${totalExpenses} in expenses.`
+    }
+}
+
+account.addExpense('Rent', 950)
+account.addExpense('Coffee', 2)
+account.addIncome('Job', 1000)
+console.log(account.getAccountSummary())
+```
