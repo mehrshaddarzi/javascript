@@ -125,3 +125,29 @@ let result = gradeCalc(9, 20)
 console.log(result)
 ```
 
+### Check exist Function
+```javascript
+Try something like this:
+
+if (typeof me.onChange !== "undefined") { 
+    // safe to use the function
+}
+or better yet (as per UpTheCreek upvoted comment)
+
+if (typeof me.onChange === "function") { 
+    // safe to use the function
+}
+
+
+function abc(){
+}
+!!window.abc; // return true
+!!window.abcd; // return false
+```
+
+### Debuggin
+```javascript
+
+console.log(var);
+
+
