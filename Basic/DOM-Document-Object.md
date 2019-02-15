@@ -39,6 +39,11 @@ document.querySelectorAll(':nth-child(4n)')
 
 $('#test li')
 document.querySelectorAll('#test li')
+
+//ForEach in Selector
+document.querySelector('#add-todo').forEach(function(key, index){
+
+});
 ```
 
 ## List Method
