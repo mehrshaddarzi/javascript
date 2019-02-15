@@ -35,11 +35,30 @@ const data = JSON.parse(localStorage.getItem('items'));
 
 itemsArray.push(input.value);
 localStorage.setItem('items', JSON.stringify(itemsArray));
+
+//example two
+// const user = {
+//     name: 'Andrew',
+//     age: 27
+// }
+// const userJSON = JSON.stringify(user)
+// console.log(userJSON)
+// localStorage.setItem('user', userJSON)
+
+const userJSON = localStorage.getItem('user')
+const user = JSON.parse(userJSON)
+console.log(`${user.name} is ${user.age}`)
+
 ```
 
 #### Use if Condition to Get
 ```javascript
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+const todosJSON = localStorage.getItem('todos')
+if (todosJSON !== null) {
+    todos = JSON.parse(todosJSON)
+}
 ```
 
 #### Use LocalStorage with time for cache
