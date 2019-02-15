@@ -52,13 +52,27 @@ person.age = 28
 console.log(person)
 ```
 
+## Typeof
+```javascript
+//get type of variable
+//number / string / array / object
+
+let g = typeof 123;
+console.log(g); => number
+
+if('5' == 5 ) //true
+if('5' === 5) //false
+```
+
 ### var vs let
+
 Difference between var and let in JavaScript
 var and let are both used for function declaration in javascript but the difference between them is that var is function scoped and let is block scoped.
 It can be said that a variable declared with var is defined throughout the program as compared to let.
 https://tylermcginnis.com/var-let-const/
 
 ## Operation
+
 ```javascript
 // === - equality operator
 // !== - no equal opeartor
@@ -84,6 +98,11 @@ let isSenior = age >= 65
 console.log(isChild)
 // Print is senior value
 console.log(isSenior)
+
+
+if('5' == 5 ) //true
+if('5' === 5) //false
+
 ```
 
 ## IF Statements
@@ -184,6 +203,26 @@ console.log(message)
 
 const team = ['Tyler', 'Porter', 'Andrew', 'Ben', 'Mike']
 console.log(team.length <= 4 ? `Team size: ${team.length}` : 'Too many people on your team')
+```
+
+### Truthy and falsy
+```javascript
+
+// Truthy - Values that resolve to true in boolean context
+// Falsy - Values that resolve to false in boolean context
+// Falsy values - false, 0, empty string, null, undefined, NaN
+
+const products = [{ name: 'Computer mouse'}]
+const product = products[0]
+
+if (product) {
+    console.log('Product found')
+} else {
+    console.log('Product not found')
+}
+
+if(v !==null)       => if(v)
+if(x === undefined) => if(!x)
 ```
 
 ### undefinde and Null
