@@ -19,6 +19,27 @@ Some of these methods return a NodeList, so be sure to check its length property
 https://blog.bitsrc.io/dom-selectors-explained-70260049aaf0
 https://developer.rackspace.com/blog/using-querySelector-on-elements/
 
+## Selector
+```javascript
+$('#test')
+document.querySelector('#test')
+//We use querySelector since an id is unique in the page
+
+$('div')
+document.querySelectorAll('div')
+
+$('div, span')
+document.querySelectorAll('div, span')
+
+$('[data-example="test"]')
+document.querySelectorAll('[data-example="test"]')
+
+$(':nth-child(4n)')
+document.querySelectorAll(':nth-child(4n)')
+
+$('#test li')
+document.querySelectorAll('#test li')
+```
 
 ## List Method
 ``` javascript
