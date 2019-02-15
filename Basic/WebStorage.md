@@ -118,6 +118,20 @@ window.addEventListener('storage', function (e) {
 })
 ```
 
+### Use try catch in get item
+```javascript
+// Fetch existing todos from localStorage
+const getSavedTodos = () => {
+    const todosJSON = localStorage.getItem('todos')
+
+    try {
+        return todosJSON ? JSON.parse(todosJSON) : []
+    } catch (e) {
+        return []
+    }
+}
+```
+
 #### Use LocalStorage with time for cache
 https://github.com/pamelafox/lscache
 
