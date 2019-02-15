@@ -24,6 +24,6 @@ location.hash
 
 //for get without hash
 var $yoyo = window.location.hash.substring(1);
-
+var $yoyo = window.location.hash.replace("#", "");
 
 ```
