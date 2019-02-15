@@ -119,3 +119,16 @@ document.querySelector('button').addEventListener('click', function (e) {
 })
 ```
 > https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+## input Data
+```javascript
+// Listen for todo text change with any keyboard
+document.querySelector('#new-todo-text').addEventListener('input', function (e) {
+    console.log(e.target.value)
+})
+
+// Listen for todo text change after focus
+document.querySelector('#new-todo-text').addEventListener('change', function (e) {
+    console.log(e.target.value)
+})
+```
