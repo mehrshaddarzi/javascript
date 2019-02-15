@@ -37,6 +37,9 @@ let restaurant = {
     seatParty: function (partySize) {
         this.guestCount = this.guestCount + partySize
     },
+    getSummary() {
+        return `The car is ${this.color}`
+    },
     removeParty: function (partySize) {
         this.guestCount = this.guestCount - partySize
     }
