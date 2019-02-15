@@ -10,3 +10,8 @@ live-server                -> for run
 live-server --version      -> for get version
 ```
 > https://www.npmjs.com/package/live-server
+
+### UUID
+```
+https://github.com/kelektiv/node-uuid
+```
