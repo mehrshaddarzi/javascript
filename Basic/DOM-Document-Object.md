@@ -117,8 +117,17 @@ document.querySelector('button').addEventListener('click', function (e) {
     e.target.textContent = 'ddfdf'
     document.getElementById("demo").innerHTML = "Hello World";
 })
+
+
+//handle in all windows
+window.addEventListener('click', function (e) {
+    console.log('Add a new todo...')
+  
+})
 ```
 > https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+> https://developer.mozilla.org/en-US/docs/Web/API/Window
+
 
 ## Form and input Data
 ```javascript
