@@ -145,9 +145,65 @@ function abc(){
 !!window.abcd; // return false
 ```
 
-### Debuggin
+### es6 arrow function
 ```javascript
 
-console.log(var);
+const squareLong = function(num) {
+    return num * num
+}
 
+const squareLong = (num) => {
+    return num * num
+}
+
+//if only return we can remove brace
+const square = (num) => num * num
+
+console.log(square(5))
+
+const people = [{
+    name: 'Andrew',
+    age: 27
+}, {
+    name: 'Vikram',
+    age: 31
+}, {
+    name: 'Jess',
+    age: 22
+}]
+
+// const under30 = people.filter(function (person) {
+//     return person.age < 30
+// })
+
+const under30 = people.filter((person) => person.age < 30)
+console.log(under30)
+
+const person = people.find((person) => person.age === 22)
+console.log(person.name)
+```
+
+### Get argument in function
+```javascript
+
+const add = function() {
+    //return arguments[0] + arguments[1]
+    console.log( arguments );
+}
+console.log(add(11, 22, 33, 44))
+```
+دو تفاوت حالت اصلی با خلاصه :
+در حالت خلاصه ما مانند مثال بالا نمیتوانیم به آرگومان های آزاد دسترسی پیداکنیم
+2. در شی گرایی در حالت خلاصه ما نمتواینم به this دسترسی داشته باشیم
+و باید از مورد پایینی اصتفاده شود :
+
+```javascript
+const car = {
+    color: 'Red',
+    getSummary() {
+        return `The car is ${this.color}`
+    }
+}
+console.log(car.getSummary())
+```
 
