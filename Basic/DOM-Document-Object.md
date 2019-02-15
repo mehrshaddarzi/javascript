@@ -120,8 +120,15 @@ document.querySelector('button').addEventListener('click', function (e) {
 ```
 > https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 
-## input Data
+## Form and input Data
 ```javascript
+//Submit Handler
+document.querySelector('#name-form').addEventListener('submit', function (e) {
+    e.preventDefault()
+    console.log(e.target.elements.firstName.value)
+    e.target.elements.firstName.value = ''
+})
+
 // Listen for todo text change with any keyboard
 document.querySelector('#new-todo-text').addEventListener('input', function (e) {
     console.log(e.target.value)
@@ -129,6 +136,16 @@ document.querySelector('#new-todo-text').addEventListener('input', function (e) 
 
 // Listen for todo text change after focus
 document.querySelector('#new-todo-text').addEventListener('change', function (e) {
+    console.log(e.target.value)
+})
+
+//checkbox
+document.querySelector('#for-fun').addEventListener('change', function (e) {
+    console.log(e.target.checked) ===true or false
+})
+
+//Select Box
+document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value)
 })
 ```
