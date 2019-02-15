@@ -107,6 +107,17 @@ const renderNotes = function (notes, filters) {
 }
 ```
 
+## Synce DAta Beetwwen Windows Browser
+```javascript
+//if change storage
+window.addEventListener('storage', function (e) {
+    if (e.key === 'notes') {
+        notes = JSON.parse(e.newValue)
+        renderNotes(notes, filters)
+    }
+})
+```
+
 #### Use LocalStorage with time for cache
 https://github.com/pamelafox/lscache
 
