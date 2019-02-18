@@ -108,3 +108,20 @@ let addExpense = function (account, amount) {
 addExpense(myAccount, 2.50)
 console.log(myAccount)
 ```
+
+### Push to object or array
+```javascript
+var element = {}, 
+cart = [];
+element.id = id;
+element.quantity = quantity;
+cart.push(element);
+
+
+//example 2
+var element = {}, cart = [];
+element.id = id;
+element.quantity = quantity;
+cart.push({element: element});
+```
+
