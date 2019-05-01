@@ -125,3 +125,7 @@ element.quantity = quantity;
 cart.push({element: element});
 ```
 
+### Article
+```
+https://medium.com/youstart-labs/javascript-object-methods-every-developer-should-know-c68c132a658
+```
