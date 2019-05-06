@@ -128,4 +128,5 @@ cart.push({element: element});
 ### Article
 ```
 https://medium.com/youstart-labs/javascript-object-methods-every-developer-should-know-c68c132a658
+https://stackoverflow.com/questions/684672/how-do-i-loop-through-or-enumerate-a-javascript-object
 ```
