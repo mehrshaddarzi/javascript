@@ -213,3 +213,57 @@ fetch(url + QueryString, request)
     });
 };
 ```
+
+## Country API with Fetch
+
+```js
+const getCountry = (countryCode) => {
+    return fetch('http://restcountries.eu/rest/v2/all').then((response) => {
+        if (response.status === 200) {
+            return response.json()
+        } else {
+            throw new Error('Unable to fetch data')
+        }
+    }).then((data) => {
+        return data.find((country) => country.alpha2Code === countryCode)
+    })
+}
+
+
+getCountry('US').then((country) => {
+    console.log(country.name)
+}).catch((err) => {
+    console.log(`Error: ${err}`)
+})
+```
+
+## Async/Await
+```js
+const getCountry = async (countryCode) => {
+    const response = await fetch('http://restcountries.eu/rest/v2/all')
+
+    if (response.status === 200) {
+        const data = await response.json()
+        return data.find((country) => country.alpha2Code === countryCode)
+    } else {
+        throw new Error('Unable to fetch the country')
+    }
+}
+
+const getCurrentCountry = async () => {
+    const location = await getLocation()
+    return getCountry(location.country)
+}
+
+getPuzzle('2').then((puzzle) => {
+    console.log(puzzle)
+}).catch((err) => {
+    console.log(`Error: ${err}`)
+})
+
+getCurrentCountry().then((country) => {
+    console.log(country.name)
+}).catch((error) => {
+    console.log(error)
+})
+```
