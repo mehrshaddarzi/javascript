@@ -61,6 +61,63 @@ if (todosJSON !== null) {
 }
 ```
 
+#### User time Expire
+```javascript
+var filter_data = localStorage.getItem('wp-statistics-visitors-filter') ? JSON.parse(localStorage.getItem('wp-statistics-visitors-filter')) : {};
+if (!wps_js.isset(filter_data, 'timestamp') || !wps_js.isset(filter_data, 'value') || (wps_js.isset(filter_data, 'timestamp') && wps_js.isset(filter_data, 'value') && (new Date().getTime().toString() > parseInt(filter_data.timestamp)))) {
+
+// Create Params
+let params = {
+    'wps_nonce': wps_js.global.rest_api_nonce,
+    'action': 'wp_statistics_visitors_page_filters'
+};
+params = Object.assign(params, wps_js.global.request_params);
+
+// Create Ajax
+jQuery.ajax({
+    url: wps_js.global.ajax_url,
+    type: 'GET',
+    dataType: "json",
+    data: params,
+    timeout: 30000,
+    success: function (data) {
+
+        // Set LocalStorage , Cached for 3 Hour
+        localStorage.setItem('wp-statistics-visitors-filter', JSON.stringify({
+            value: JSON.stringify(data),
+            timestamp: (new Date().getTime() + (3 * 60 * 60 * 1000))
+        }));
+
+        // Load function
+        wp_statistics_show_visitors_filter(tickBox_DIV, data);
+    },
+    error: function (xhr, status, error) {
+        jQuery("span.tb-close-icon").click();
+    }
+});
+} else {
+wp_statistics_show_visitors_filter(tickBox_DIV, JSON.parse(filter_data['value']));
+}
+
+/**
+ * Isset Property in Object
+ *
+ * @param obj
+ */
+wps_js.isset = function (obj) {
+    let args = Array.prototype.slice.call(arguments, 1);
+
+    for (let i = 0; i < args.length; i++) {
+        if (!obj || !obj.hasOwnProperty(args[i])) {
+            return false;
+        }
+        obj = obj[args[i]];
+    }
+    return true;
+};
+```
+
+
 #### Example Function App
 ```javascript
 // Read existing notes from localStorage
@@ -107,7 +164,7 @@ const renderNotes = function (notes, filters) {
 }
 ```
 
-## Synce DAta Beetwwen Windows Browser
+## Synce Data Beetwwen Windows Browser
 ```javascript
 //if change storage
 window.addEventListener('storage', function (e) {
