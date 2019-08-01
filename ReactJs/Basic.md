@@ -1,6 +1,6 @@
 ### Basic Example
 
-```javasript
+```javascript
 function Person(props) {
   return (
     <div className="person">
