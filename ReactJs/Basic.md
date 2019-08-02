@@ -63,3 +63,7 @@ class Person {
 const person = new Person();
 console.log(person.name); // prints 'Max'
 ```
+
+<img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-1.JPG">
+<img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-2-es7.JPG">
+<img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-3-es5.JPG">
