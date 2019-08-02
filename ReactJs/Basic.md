@@ -39,3 +39,9 @@ const Print = (v1, v2) => {
 // If One Line
 const Print = (v1, v2) => return v1 * v2;
 ```
+
+
+### Import and Export
+
+<img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/export-import-1.jpg">
+<img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/export-import-2.jpg">
