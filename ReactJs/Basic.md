@@ -67,3 +67,64 @@ console.log(person.name); // prints 'Max'
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-1.JPG">
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-2-es7.JPG">
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/class-3-es5.JPG">
+
+
+### Spread Array
+
+```javascript
+const Number = [1,2,3]
+const NewNumbers = [...Number, 4]; //[1,2,3,4]
+const NewNumbers = [Number, 4]; //[[1,2,3],4]
+
+
+const oldObject = {
+    name: 'Max'
+};
+const newObject = {
+    ...oldObject,
+    age: 28
+};
+
+newObject  would then be
+{
+    name: 'Max',
+    age: 28
+}
+
+// Use in function
+const filter = (...args) => {
+  return args.filter(el => el ===1);
+}
+filter(1,2,8,3,6); //[1]
+```
+
+### Destructuring Array
+
+```javascript
+const array = [1, 2, 3];
+const [a, b] = array;
+console.log(a); // prints 1
+console.log(b); // prints 2
+console.log(array); // prints [1, 2, 3]
+
+const myObj = {
+    name: 'Max',
+    age: 28
+}
+const {name} = myObj;
+console.log(name); // prints 'Max'
+console.log(age); // prints undefined
+console.log(myObj); // prints {name: 'Max', age: 28}
+```
+
+### Arrow Function Helper
+
+Particularly important in this course are:
+map()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+find()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+findIndex()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+filter()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+reduce()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=b
+concat()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=b
+slice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+splice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
