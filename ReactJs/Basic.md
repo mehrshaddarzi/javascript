@@ -19,3 +19,23 @@ var app = (
 
 ReactDOM.render(app, document.querySelector('#app'));
 ```
+
+
+### Arrow Function
+
+```javascript
+const Print = name => {
+  return name;
+}
+
+const Print = () => {
+  return 23;
+}
+
+const Print = (v1, v2) => {
+  return v1 * v2;
+}
+
+// If One Line
+const Print = (v1, v2) => return v1 * v2;
+```
