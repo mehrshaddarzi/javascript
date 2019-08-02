@@ -45,3 +45,21 @@ const Print = (v1, v2) => return v1 * v2;
 
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/export-import-1.jpg">
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/javascript/master/ReactJs/Images/export-import-2.jpg">
+
+
+### Class
+
+```javascript
+class Person {
+    constructor () {
+        this.name = 'Max';
+    }
+    
+    printMyName() {
+        console.log(this.name); // this is required to refer to the class!
+    }
+}
+
+const person = new Person();
+console.log(person.name); // prints 'Max'
+```
