@@ -120,6 +120,7 @@ console.log(myObj); // prints {name: 'Max', age: 28}
 ### Arrow Function Helper
 
 Particularly important in this course are:
+
 map()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 find()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
