@@ -237,6 +237,8 @@ getCountry('US').then((country) => {
 })
 ```
 
+> https://blog.logrocket.com/improve-async-programming-with-javascript-promises-1652ac8d036d/
+
 ## Async/Await
 ```js
 const getCountry = async (countryCode) => {
