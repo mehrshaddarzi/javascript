@@ -132,6 +132,10 @@ console.log(todos)
 
 
 ## Filter Array
+
+> https://alligator.io/js/filter-array-method/
+
+
 ```javascript
 const notes = [{
     title: 'My next trip',
